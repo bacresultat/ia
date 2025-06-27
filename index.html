@@ -125,9 +125,11 @@
     checkoutButton.addEventListener('click', async () => {
       loadingMessage.style.display = 'block';
       errorMessage.style.display = 'none';
+        
 
       try {
-        const response = await fetch('https://alkyai.onrender.com/create-checkout-session-formation', {
+                const response = await fetch('https://ia-95z0.onrender.com/create-checkout-session-formation', {
+
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
         });
