@@ -87,6 +87,71 @@
   <p>💸 Satisfait ou remboursé : vous pouvez demander un remboursement en cas d’erreur ou d’insatisfaction.</p>
 </section>
 
+<section class="temoignages-alkyai">
+  <div class="container">
+    <h2 class="title">📢 Ils ont obtenus leur résultats...</h2>
+    <p class="intro">
+      
+    </p>
+
+    <div class="avis-grid">
+
+      <!-- Témoignage 1 -->
+      <div class="card">
+        <div class="profil">
+          <img src="tiktok.jpg" alt="LinaWave" />
+          <div>
+            <h3>@les_fifousssss</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “olololo la honte > 5 en philo !!!!!”
+        </p>
+        
+      </div>
+
+      <!-- Témoignage 2 -->
+      <div class="card">
+        <div class="profil">
+          <img src="insta.jpg" alt="ZackBoost" />
+          <div>
+            <h3>@zacknot</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “votez la pétition pour la physique c'était trop dur j'ai eu 7”
+        </p>
+       
+      </div>
+
+      <!-- Témoignage 3 -->
+      <div class="card">
+        <div class="profil">
+          <img src="cartoon-tiktok-pfp.avif" alt="MayaFlow" />
+          <div>
+            <h3>@mistraworld</h3>
+            
+          </div>
+        </div>
+        <p class="commentaire">
+          “purée trop le seum 16 en maths”
+        </p>
+        
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="fake-comment-section">
+  <h2>Laisser un commentaire</h2>
+  <div class="comment-box">
+    <textarea id="fake-comment-text" placeholder="Écrivez votre commentaire ici..."></textarea>
+    <button id="fake-comment-button" type="button">Envoyer</button>
+    <p id="fake-comment-message" style="display: none; color: green; font-weight: bold;">✅ Commentaire envoyé !</p>
+  </div>
+</section>
 
 
   <footer class="trusted-footer">
@@ -151,6 +216,31 @@
         loadingMessage.style.display = 'none';
         console.error("Erreur :", error);
       }
+    });
+  });
+  
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const fakeButton = document.getElementById('fake-comment-button');
+    const fakeMessage = document.getElementById('fake-comment-message');
+    const fakeTextarea = document.getElementById('fake-comment-text');
+
+    fakeButton.addEventListener('click', () => {
+      const content = fakeTextarea.value.trim();
+      if (content.length === 0) {
+        fakeMessage.style.color = 'red';
+        fakeMessage.textContent = '❌ Veuillez écrire un commentaire.';
+        fakeMessage.style.display = 'block';
+        return;
+      }
+
+      fakeMessage.style.color = 'green';
+      fakeMessage.textContent = '✅ Commentaire envoyé !';
+      fakeMessage.style.display = 'block';
+
+      // Optionnel : effacer le commentaire simulé
+      fakeTextarea.value = '';
     });
   });
 </script>
