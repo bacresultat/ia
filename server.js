@@ -48,7 +48,7 @@ app.post('/create-checkout-session-formation', async (req, res) => {
           currency: 'eur',
           product_data: {
             name: 'Résultats anticipés Bac/Brevet 2025',
-            description: 'Recevez votre résulats avant la date officielle',
+            description: 'Recevez vos résulats avant la date officielle',
           },
           unit_amount: 300, // ✅ 1€ = 100 centimes
         },
