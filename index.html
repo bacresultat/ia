@@ -15,7 +15,7 @@
     <div class="logo-container">
       <img src="9448bfc1-2cb2-46be-924a-c9d4da2d4d9f.png" alt="Logo AlkyAI" class="logo">
       <h1 class="site-title">AlkyAI</h1>
-      <p class="subtitle">Reçois tes résultats du BAC ou du Brevet 2025 <strong>en avance !</strong></p>
+      <p class="subtitle">Reçois tes résultats du Bac ou du Brevet 2025 <strong>avant tout le monde !</strong></p>
       
 
     </div>
@@ -30,7 +30,7 @@
   <section class="intro">
     <h2>Un service rapide, confidentiel et accessible pour tout les terminales et troisièmes de France !</h2>
     <p>
-      AlkyAI utilise l’intelligence artificielle et les informations officielles pour retrouver vos résultats du Baccalauréat ou du Brevet <strong>avant leur publication, le 4 juillet 2025</strong>. 
+      AlkyAI utilise l’intelligence artificielle et les informations officielles pour retrouver vos résultats au Bac ou au Brevet <strong>avant leur publication, le 4 juillet 2025</strong>. 
     </p>
   </section>
 
@@ -54,7 +54,7 @@
       <label for="exam-type">Type d'examen :</label>
       <select id="exam-type" name="exam-type" required>
         <option value="">-- Choisir un examen --</option>
-        <option value="bac">Baccalauréat 2025/BAC Pro 2025</option>
+        <option value="bac">Baccalauréat 2025</option>
         <option value="brevet">Brevet 2025</option>
       </select>
 
@@ -95,10 +95,6 @@
   <option value="Saint-Pierre-et-Miquelon">Saint-Pierre-et-Miquelon</option>
   <option value="Polynésie française">Polynésie française</option>
   <option value="Nouvelle-Calédonie">Nouvelle-Calédonie</option>
-  <option value="Maroc">Maroc</option>
-  <option value="Algérie">Algérie</option>  
-  <option value="Tunisie">Tunisie</option>
-  <option value="Autres">Autres</option>      
 </select>
 
 
@@ -252,7 +248,7 @@ Ce qui explique les variations de prix lors de vos différentes connexions à no
         
   <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const stripe = Stripe('pk_live_51RhQxmCk1lAKRItNO3wkwG3BAIhR6b2p65leLb73gqsannOXxTA7vxFf8tJQu9Y0j8x9YaSbag7Uliusvt4Y5T2a00NOPrCwk1");
+    const stripe = Stripe('pk_live_51RhQxmCk1lAKRItNO3wkwG3BAIhR6b2p65leLb73gqsannOXxTA7vxFf8tJQu9Y0j8x9YaSbag7Uliusvt4Y5T2a00NOPrCwk1');
     const errorMessage = document.getElementById('error-message');
     const checkoutButton = document.getElementById('checkout-button');
 
@@ -273,7 +269,7 @@ Ce qui explique les variations de prix lors de vos différentes connexions à no
         
 
       try {
-                const response = await fetch('https://ia-1-5r7q.onrender.com/create-checkout-session-formation', {
+                const response = await fetch('https://ia-95z0.onrender.com/create-checkout-session-formation', {
 
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
